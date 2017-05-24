@@ -13,6 +13,7 @@ RSpec.describe TasksController, type: :controller do
             response_ids = response_value.collect do |task|
                 task["id"]
             end
+            expect(response_ids).to eq([task1.id, task2.id])
         end
     end
     
